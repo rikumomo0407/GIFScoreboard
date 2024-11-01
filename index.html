@@ -34,10 +34,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 450px;
-            height: 350px;
+            height: 370px; /* 高さを増やしてpaddingを追加 */
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 20px;
-            padding: 20px;
+            padding: 20px 20px 40px; /* 下部に余白を追加 */
             z-index: 0;
         }
 
@@ -61,17 +61,10 @@
             z-index: 1;
         }
 
-        /* 番号サークル */
-        .score-item .rank-number {
-            background-color: white;
-            border-radius: 50%;
-            width: 35px;
+        /* 番号画像 */
+        .score-item .rank-number img {
+            width: 35px; /* 画像のサイズを調整 */
             height: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #333;
             margin-right: 15px;
         }
 
@@ -117,26 +110,26 @@
     <div class="scoreboard-container">
         <!-- タイトル画像 -->
         <div class="title">
-            <img src="22963945.jpeg" alt="ランキング">
+            <img src="ranking-title.png" alt="ランキング">
         </div>
 
         <!-- スコアアイテム -->
         <div class="score-item gold">
-            <div class="rank-number">1</div>
+            <div class="rank-number"><img src="rank1.png" alt="1位"></div>
             <div class="name">APPLE</div>
-            <div class="score">120点</div>
+            <div class="score">100点</div>
         </div>
 
         <div class="score-item silver">
-            <div class="rank-number">2</div>
+            <div class="rank-number"><img src="rank2.png" alt="2位"></div>
             <div class="name">吃瓜群众</div>
-            <div class="score">110点</div>
+            <div class="score">90点</div>
         </div>
 
         <div class="score-item bronze">
-            <div class="rank-number">3</div>
+            <div class="rank-number"><img src="rank3.png" alt="3位"></div>
             <div class="name">一路向东</div>
-            <div class="score">100点</div>
+            <div class="score">80点</div>
         </div>
     </div>
 </body>
