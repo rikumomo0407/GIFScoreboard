@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スコアボード</title>
+    <style>
+        /* 背景設定 */
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('background.gif'); /* 背景に使用するGIF画像のパス */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* スコアボードのスタイル */
+        .scoreboard {
+            background-color: rgba(0, 0, 0, 0.6); /* 背景の半透明黒 */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .score {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        /* 順位のスタイル */
+        .rank {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scoreboard">
+        <h1>スコアボード</h1>
+        <div class="score">
+            <div class="rank">1位: 太郎 - 100点</div>
+            <div class="rank">2位: 花子 - 80点</div>
+            <div class="rank">3位: 次郎 - 60点</div>
+        </div>
+    </div>
+</body>
+</html>
