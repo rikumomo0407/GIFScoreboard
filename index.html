@@ -42,12 +42,9 @@
         }
 
         /* タイトルのスタイル */
-        .title {
-            font-size: 2em;
-            font-weight: bold;
-            color: white;
+        .title img {
+            width: 200px; /* 画像のサイズを調整 */
             margin-bottom: 20px;
-            z-index: 1;
         }
 
         /* スコアアイテムのスタイル */
@@ -118,8 +115,10 @@
 
     <!-- スコアボードコンテナ -->
     <div class="scoreboard-container">
-        <!-- タイトル -->
-        <div class="title">ランキング</div>
+        <!-- タイトル画像 -->
+        <div class="title">
+            <img src="ranking-title.png" alt="ランキング">
+        </div>
 
         <!-- スコアアイテム -->
         <div class="score-item gold">
