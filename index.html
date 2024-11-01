@@ -24,6 +24,7 @@
             height: 100vh;
             flex-direction: column;
             gap: 15px;
+            position: relative;
         }
 
         /* スコアボードの背景 */
@@ -32,10 +33,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
-            height: 300px;
+            width: 450px;
+            height: 350px;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 20px;
+            padding: 20px;
             z-index: 0;
         }
 
@@ -64,10 +66,6 @@
 
         /* 番号サークル */
         .score-item .rank-number {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             background-color: white;
             border-radius: 50%;
             width: 35px;
@@ -77,6 +75,7 @@
             justify-content: center;
             font-weight: bold;
             color: #333;
+            margin-right: 15px;
         }
 
         /* 名前とスコアのテキスト部分 */
@@ -84,12 +83,12 @@
             font-size: 1.2em;
             font-weight: bold;
             color: #333;
+            flex: 1;
         }
 
         .score-item .score {
             font-size: 1.2em;
             font-weight: bold;
-            margin-left: auto;
             color: #333;
         }
 
@@ -124,21 +123,21 @@
 
         <!-- スコアアイテム -->
         <div class="score-item gold">
+            <div class="rank-number">1</div>
             <div class="name">APPLE</div>
             <div class="score">120点</div>
-            <div class="rank-number">1</div>
         </div>
 
         <div class="score-item silver">
+            <div class="rank-number">2</div>
             <div class="name">吃瓜群众</div>
             <div class="score">110点</div>
-            <div class="rank-number">2</div>
         </div>
 
         <div class="score-item bronze">
+            <div class="rank-number">3</div>
             <div class="name">一路向东</div>
             <div class="score">100点</div>
-            <div class="rank-number">3</div>
         </div>
     </div>
 </body>
