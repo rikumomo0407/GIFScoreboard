@@ -16,7 +16,7 @@
             z-index: -1;
         }
 
-        /* スコアボードを中央に配置 */
+        /* スコアボード全体を中央に配置 */
         .scoreboard-container {
             display: flex;
             align-items: center;
@@ -26,17 +26,40 @@
             gap: 15px;
         }
 
-        /* スコアボードのスタイル */
+        /* スコアボードの背景 */
+        .scoreboard-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            z-index: 0;
+        }
+
+        /* タイトルのスタイル */
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        /* スコアアイテムのスタイル */
         .score-item {
             display: flex;
             align-items: center;
             background-color: #FFD54F;
             border-radius: 25px;
-            padding: 10px 20px;
-            width: 300px;
+            padding: 15px 25px;
+            width: 350px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
             font-family: Arial, sans-serif;
+            z-index: 1;
         }
 
         /* 番号サークル */
@@ -56,30 +79,18 @@
             color: #333;
         }
 
-        /* アイコン画像 */
-        .score-item img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-
-        /* テキスト部分 */
-        .score-item .text {
-            flex-grow: 1;
-        }
-
+        /* 名前とスコアのテキスト部分 */
         .score-item .name {
             font-size: 1.2em;
             font-weight: bold;
-            margin: 0;
             color: #333;
         }
 
-        .score-item .level {
-            font-size: 0.9em;
-            color: #666;
-            margin: 5px 0 0 0;
+        .score-item .score {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-left: auto;
+            color: #333;
         }
 
         /* 色別のスタイル */
@@ -103,32 +114,30 @@
         お使いのブラウザは動画をサポートしていません。
     </video>
 
-    <!-- スコアボードを中央に配置するためのコンテナ -->
+    <!-- スコアボードの裏に背景を追加 -->
+    <div class="scoreboard-background"></div>
+
+    <!-- スコアボードコンテナ -->
     <div class="scoreboard-container">
+        <!-- タイトル -->
+        <div class="title">ランキング</div>
+
+        <!-- スコアアイテム -->
         <div class="score-item gold">
-            <img src="https://via.placeholder.com/50" alt="Icon">
-            <div class="text">
-                <p class="name">APPLE</p>
-                <p class="level">LV12</p>
-            </div>
+            <div class="name">APPLE</div>
+            <div class="score">120点</div>
             <div class="rank-number">1</div>
         </div>
 
         <div class="score-item silver">
-            <img src="https://via.placeholder.com/50" alt="Icon">
-            <div class="text">
-                <p class="name">吃瓜群众</p>
-                <p class="level">LV13</p>
-            </div>
+            <div class="name">吃瓜群众</div>
+            <div class="score">110点</div>
             <div class="rank-number">2</div>
         </div>
 
         <div class="score-item bronze">
-            <img src="https://via.placeholder.com/50" alt="Icon">
-            <div class="text">
-                <p class="name">一路向东</p>
-                <p class="level">LV18</p>
-            </div>
+            <div class="name">一路向东</div>
+            <div class="score">100点</div>
             <div class="rank-number">3</div>
         </div>
     </div>
