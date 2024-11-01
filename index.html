@@ -3,70 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スコアボード</title>
+    <title>スコアボードデザイン</title>
     <style>
-        /* ビデオの設定 */
-        .background-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        /* スコアボードを中央に配置 */
-        .scoreboard-container {
+        /* 全体のスタイル */
+        body {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-        }
-
-        /* スコアボードのスタイル */
-        .scoreboard {
-            background-color: rgba(0, 0, 0, 0.6); /* 背景の半透明黒 */
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-        }
-
-        h1 {
             margin: 0;
-            font-size: 2em;
+            background-color: #F8B9AD;
+            font-family: Arial, sans-serif;
         }
 
-        .score {
-            font-size: 1.5em;
+        /* スコアボードのアイテム */
+        .score-item {
+            display: flex;
+            align-items: center;
+            background-color: #FFD54F;
+            border-radius: 25px;
+            padding: 10px 20px;
             margin: 10px 0;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
-        .rank {
+        /* 番号サークル */
+        .score-item .rank-number {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
-            margin-bottom: 5px;
+            color: #333;
+        }
+
+        /* アイコン画像 */
+        .score-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        /* テキスト部分 */
+        .score-item .text {
+            flex-grow: 1;
+        }
+
+        .score-item .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+
+        .score-item .level {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+
+        /* 色別のスタイル */
+        .score-item.gold {
+            background-color: #FFD54F;
+        }
+
+        .score-item.silver {
+            background-color: #80DEEA;
+        }
+
+        .score-item.bronze {
+            background-color: #EEEEEE;
         }
     </style>
 </head>
 <body>
-    <!-- 背景ビデオ -->
-    <video class="background-video" autoplay loop muted>
-        <source src="videoplayback.mp4" type="video/mp4">
-        お使いのブラウザは動画をサポートしていません。
-    </video>
 
-    <!-- スコアボードを中央に配置するためのコンテナ -->
-    <div class="scoreboard-container">
-        <div class="scoreboard">
-            <h1>スコアボード</h1>
-            <div class="score">
-                <div class="rank">1位: 太郎 - 100点</div>
-                <div class="rank">2位: 花子 - 80点</div>
-                <div class="rank">3位: 次郎 - 60点</div>
-            </div>
+    <div class="score-item gold">
+        <img src="https://via.placeholder.com/50" alt="Icon">
+        <div class="text">
+            <p class="name">APPLE</p>
+            <p class="level">LV12</p>
         </div>
+        <div class="rank-number">1</div>
     </div>
+
+    <div class="score-item silver">
+        <img src="https://via.placeholder.com/50" alt="Icon">
+        <div class="text">
+            <p class="name">吃瓜群众</p>
+            <p class="level">LV13</p>
+        </div>
+        <div class="rank-number">2</div>
+    </div>
+
+    <div class="score-item bronze">
+        <img src="https://via.placeholder.com/50" alt="Icon">
+        <div class="text">
+            <p class="name">一路向东</p>
+            <p class="level">LV18</p>
+        </div>
+        <div class="rank-number">3</div>
+    </div>
+
 </body>
 </html>
