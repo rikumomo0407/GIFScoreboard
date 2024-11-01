@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スコアボードデザイン</title>
+    <title>スコアボード</title>
     <style>
-        /* 全体のスタイル */
-        body {
+        /* ビデオの設定 */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* スコアボードを中央に配置 */
+        .scoreboard-container {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
-            background-color: #F8B9AD;
-            font-family: Arial, sans-serif;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        /* スコアボードのアイテム */
+        /* スコアボードのスタイル */
         .score-item {
             display: flex;
             align-items: center;
             background-color: #FFD54F;
             border-radius: 25px;
             padding: 10px 20px;
-            margin: 10px 0;
             width: 300px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
+            font-family: Arial, sans-serif;
         }
 
         /* 番号サークル */
@@ -87,33 +97,40 @@
     </style>
 </head>
 <body>
+    <!-- 背景ビデオ -->
+    <video class="background-video" autoplay loop muted>
+        <source src="videoplayback.mp4" type="video/mp4">
+        お使いのブラウザは動画をサポートしていません。
+    </video>
 
-    <div class="score-item gold">
-        <img src="https://via.placeholder.com/50" alt="Icon">
-        <div class="text">
-            <p class="name">APPLE</p>
-            <p class="level">LV12</p>
+    <!-- スコアボードを中央に配置するためのコンテナ -->
+    <div class="scoreboard-container">
+        <div class="score-item gold">
+            <img src="https://via.placeholder.com/50" alt="Icon">
+            <div class="text">
+                <p class="name">APPLE</p>
+                <p class="level">LV12</p>
+            </div>
+            <div class="rank-number">1</div>
         </div>
-        <div class="rank-number">1</div>
-    </div>
 
-    <div class="score-item silver">
-        <img src="https://via.placeholder.com/50" alt="Icon">
-        <div class="text">
-            <p class="name">吃瓜群众</p>
-            <p class="level">LV13</p>
+        <div class="score-item silver">
+            <img src="https://via.placeholder.com/50" alt="Icon">
+            <div class="text">
+                <p class="name">吃瓜群众</p>
+                <p class="level">LV13</p>
+            </div>
+            <div class="rank-number">2</div>
         </div>
-        <div class="rank-number">2</div>
-    </div>
 
-    <div class="score-item bronze">
-        <img src="https://via.placeholder.com/50" alt="Icon">
-        <div class="text">
-            <p class="name">一路向东</p>
-            <p class="level">LV18</p>
+        <div class="score-item bronze">
+            <img src="https://via.placeholder.com/50" alt="Icon">
+            <div class="text">
+                <p class="name">一路向东</p>
+                <p class="level">LV18</p>
+            </div>
+            <div class="rank-number">3</div>
         </div>
-        <div class="rank-number">3</div>
     </div>
-
 </body>
 </html>
